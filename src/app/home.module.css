@@ -1,0 +1,321 @@
+/* Home: Marquee Hero. The name fills the fold edge to edge; below the brand bar the page becomes a work list. */
+
+.hero {
+  position: relative;
+  padding-block: var(--space-2xl) var(--space-3xl);
+}
+
+.heroInner {
+  container-type: inline-size;
+  position: relative;
+  z-index: var(--z-raised);
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.name {
+  margin: 0;
+  font-size: var(--text-marquee);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-lg);
+  max-width: 44rem;
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  border: var(--rule-hair) solid var(--color-edge);
+  border-radius: var(--radius);
+  image-rendering: pixelated;
+}
+
+.tagline {
+  margin: 0;
+  font-size: var(--text-lead);
+  line-height: 1.45;
+  color: var(--color-ink);
+}
+
+@media (min-width: 40rem) {
+  .avatar {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+/* ---------- work ---------- */
+
+.h2 {
+  margin: 0;
+  font-size: var(--text-h2);
+}
+
+.work {
+  display: grid;
+  gap: var(--space-2xl);
+  padding-block: var(--space-3xl) var(--space-2xl);
+}
+
+.feature {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.featureText {
+  display: grid;
+  gap: var(--space-lg);
+  align-content: start;
+}
+
+.featureTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.featureTitle a {
+  transition: color var(--dur-micro) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .featureTitle a:hover {
+    color: var(--color-accent);
+  }
+}
+
+.lead {
+  margin: 0;
+  max-width: 46ch;
+  font-size: var(--text-lead);
+  line-height: 1.45;
+  color: var(--color-ink-2);
+}
+
+.figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--space-lg);
+  margin: 0;
+  padding-block: var(--space-lg);
+  border-block: var(--rule-hair) solid var(--color-rule);
+}
+
+.fig {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.figValue {
+  order: -1;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  line-height: 1;
+  color: var(--color-signal);
+  font-variant-numeric: lining-nums;
+  white-space: nowrap;
+}
+
+.figUnit {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.figNote {
+  margin: 0;
+  font-size: var(--text-label);
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.featureMedia {
+  margin: 0;
+  display: grid;
+  gap: var(--space-xs);
+  justify-self: start;
+  width: min(100%, 18rem);
+}
+
+.shot {
+  width: 100%;
+  height: auto;
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius);
+}
+
+.mediaCaption {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  color: var(--color-muted);
+}
+
+@media (min-width: 60rem) {
+  .feature {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    align-items: start;
+    gap: var(--space-3xl);
+  }
+
+  .featureMedia {
+    justify-self: end;
+    width: min(100%, 20rem);
+    margin-block-start: calc(var(--space-2xl) * -1);
+  }
+}
+
+/* The dashboard sits the other way round: wide picture, narrow text. */
+.side {
+  display: grid;
+  gap: var(--space-lg);
+  padding-block-start: var(--space-2xl);
+  border-top: var(--rule-hair) solid var(--color-rule);
+}
+
+.sideMedia {
+  margin: 0;
+}
+
+.station {
+  width: 100%;
+  height: auto;
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius);
+}
+
+.sideText {
+  display: grid;
+  gap: var(--space-md);
+  align-content: start;
+}
+
+.sideText p {
+  margin: 0;
+  max-width: 46ch;
+}
+
+.sideTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sideLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+}
+
+.sideLinks a {
+  white-space: nowrap;
+}
+
+@media (min-width: 60rem) {
+  .side {
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+    gap: var(--space-2xl);
+    align-items: end;
+  }
+}
+
+/* ---------- how I work ---------- */
+
+.how {
+  display: grid;
+  gap: var(--space-xl);
+  padding-block: var(--space-2xl) var(--space-xl);
+}
+
+.principles {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.principles li {
+  display: grid;
+  gap: var(--space-xs);
+  padding-block: var(--space-lg);
+  border-top: var(--rule-hair) solid var(--color-rule);
+}
+
+.principleLine {
+  position: relative;
+  margin: 0;
+  padding-inline-start: var(--space-lg);
+  font-size: var(--text-lead);
+  font-weight: 650;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+
+.principleLine::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+}
+
+.principleBody {
+  margin: 0;
+  padding-inline-start: var(--space-lg);
+  color: var(--color-ink-2);
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--space-lg) var(--space-xl);
+  margin: 0;
+  padding: var(--space-lg);
+  background: var(--color-paper-2);
+  border-radius: var(--radius);
+}
+
+.stack dt {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.stack dd {
+  margin: var(--space-2xs) 0 0;
+  color: var(--color-ink);
+}
+
+/* Each principle is one row: the rule on the left, why on the right. */
+@media (min-width: 52rem) {
+  .principles li {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: var(--space-2xl);
+    align-items: baseline;
+  }
+
+  .principleBody {
+    padding-inline-start: 0;
+    max-width: 52ch;
+  }
+}

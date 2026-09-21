@@ -1,0 +1,36 @@
+.field {
+  --cell: 32px;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px);
+  background-size: var(--cell) var(--cell);
+  mask-image: linear-gradient(to bottom, black 55%, transparent);
+}
+
+.px {
+  position: absolute;
+  left: calc(var(--col) * var(--cell) + 12px);
+  top: calc(var(--row) * var(--cell) + 12px);
+  width: 8px;
+  height: 8px;
+}
+
+.lavender {
+  background: var(--color-pixel-lavender);
+}
+
+.amber {
+  background: var(--color-pixel-amber);
+}
+
+.mint {
+  background: var(--color-pixel-mint);
+}
+
+.rose {
+  background: var(--color-pixel-rose);
+}

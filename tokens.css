@@ -1,0 +1,85 @@
+/* Hallmark · genre: atmospheric · macrostructure: Marquee Hero (/) + Map / Diagram (/work/lorenesia) · enrichment: Tier A CSS pixel field · nav: N9 · footer: Ft5
+ * theme: custom · vibe: "late-night game lore, pixel station, lavender signal" · paper: oklch(14.5% 0.012 293) · accent: oklch(74% 0.12 293)
+ * display: Anton · body: Geist · outlier: Geist Mono (commands, file names, tables) · axes: dark / display-condensed-bold / cool (lavender ~293°)
+ * second signal: kinetic-caption yellow oklch(90% 0.18 99), used for figures only — the same yellow the Shorts use for numbers
+ * studied: no · context: inferred from the Lorenesia brand (banner, channel badge, dashboard) · v1.1.0
+ */
+
+/* Every colour, font, size, space, easing and duration on the site comes from here.
+   @theme also exposes them to Tailwind utilities (bg-paper, text-ink, font-display, …). */
+
+@theme {
+  --color-*: initial;
+
+  /* Paper steps up in lightness for elevation. Anchor hue 293 (Lorenesia lavender). */
+  --color-paper: oklch(14.5% 0.012 293);
+  --color-paper-2: oklch(18.5% 0.016 293);
+  --color-paper-3: oklch(23% 0.022 293);
+  --color-grid: oklch(18% 0.014 293);
+  --color-rule-2: oklch(25% 0.018 293);
+  --color-rule: oklch(31% 0.022 293);
+  --color-edge: oklch(54% 0.03 293);
+
+  --color-muted: oklch(68% 0.028 293);
+  --color-ink-2: oklch(82% 0.018 293);
+  --color-ink: oklch(95% 0.008 300);
+
+  --color-accent: oklch(74% 0.12 293);
+  --color-accent-ink: oklch(14.5% 0.012 293);
+  --color-focus: oklch(80% 0.16 293);
+  --color-signal: oklch(90% 0.18 99);
+
+  /* Pixel-field squares, taken from the channel banner. Decoration only, never text. */
+  --color-pixel-lavender: oklch(62% 0.1 293);
+  --color-pixel-amber: oklch(62% 0.1 80);
+  --color-pixel-mint: oklch(58% 0.09 160);
+  --color-pixel-rose: oklch(56% 0.1 350);
+
+  --text-*: initial;
+  --text-label: 0.8rem;
+  --text-base: 1rem;
+  --text-lead: 1.25rem;
+  --text-h2: clamp(2rem, 2.2vw + 1.2rem, 3.05rem);
+  --text-display: clamp(3.5rem, 8vw + 1rem, 7rem);
+  --text-marquee: clamp(3rem, 21cqi, 15rem);
+}
+
+@theme inline {
+  --font-*: initial;
+  --font-display: var(--font-anton), "Arial Narrow", sans-serif;
+  --font-body: var(--font-geist), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+:root {
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --page-max: 74rem;
+  --page-gutter: clamp(1rem, 4vw, 3rem);
+  --measure: 65ch;
+
+  --rule-hair: 1px;
+  --rule-bar: 6px;
+  --radius: 2px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 200;
+  --z-toast: 500;
+}

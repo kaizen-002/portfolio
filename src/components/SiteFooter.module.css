@@ -1,0 +1,44 @@
+.foot {
+  display: grid;
+  gap: var(--space-xl);
+  padding-block: var(--space-3xl) var(--space-xl);
+}
+
+.line {
+  max-width: 22ch;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  line-height: 1.02;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm) var(--space-lg);
+  padding-block-start: var(--space-md);
+  border-top: var(--rule-hair) solid var(--color-rule);
+  font-size: var(--text-label);
+  color: var(--color-muted);
+}
+
+.name,
+.year {
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  gap: var(--space-lg);
+  font-size: var(--text-base);
+}
+
+.links a {
+  white-space: nowrap;
+}

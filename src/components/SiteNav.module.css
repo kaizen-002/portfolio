@@ -1,0 +1,42 @@
+.nav {
+  position: relative;
+  z-index: var(--z-raised);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: var(--space-lg);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 2.75rem;
+  font-family: var(--font-display);
+  font-size: var(--text-lead);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.avatar {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius);
+  image-rendering: pixelated;
+}
+
+.back {
+  font-family: var(--font-body);
+  color: var(--color-accent);
+  transition: transform var(--dur-micro) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .wordmark:hover .back {
+    transform: translateX(-3px);
+  }
+}

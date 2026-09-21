@@ -1,0 +1,25 @@
+.bar {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .bar {
+    display: block;
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: var(--z-sticky);
+    height: 4px;
+    background: var(--color-accent);
+    transform-origin: left center;
+    transform: scaleX(0);
+    animation: read linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes read {
+  to {
+    transform: scaleX(1);
+  }
+}
