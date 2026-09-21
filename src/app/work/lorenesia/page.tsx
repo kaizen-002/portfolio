@@ -27,6 +27,8 @@ import styles from "./case.module.css";
 
 export const metadata: Metadata = {
   title: "Lorenesia case study",
+  alternates: { canonical: "/work/lorenesia" },
+  openGraph: { type: "article", siteName: site.name, locale: "en", url: "/work/lorenesia" },
   description:
     "How one person runs an Indonesian game-lore YouTube Shorts channel with an agent pipeline: the system, before and after, real numbers and the hard decisions.",
 };

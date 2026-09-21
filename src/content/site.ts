@@ -14,7 +14,8 @@ export const site = {
   },
 } as const;
 
-// Vercel sets VERCEL_PROJECT_PRODUCTION_URL at build time. No custom domain yet.
-export const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "http://localhost:3000";
+// The public address. Share images, canonical links and the sitemap all point here.
+// Change it when the domain changes (e.g. a custom domain later), then push.
+export const productionUrl = "https://aryamulya-portfolio.vercel.app";
+
+export const siteUrl = process.env.VERCEL ? productionUrl : "http://localhost:3000";

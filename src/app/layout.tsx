@@ -16,10 +16,12 @@ export const metadata: Metadata = {
   },
   description: site.description,
   authors: [{ name: site.name, url: site.links.github }],
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: site.name,
     locale: "en",
+    url: "/",
   },
   twitter: { card: "summary_large_image" },
 };
